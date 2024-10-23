@@ -32,9 +32,14 @@ plugins {
     id 'dev.drewhamilton.poko' version '0.15.2' apply false
     id 'org.jetbrains.kotlin.jvm' version '1.9.25' apply false
     id 'com.emergetools.android' version '4.0.0' apply false
+    id 'maven-publish'
 }
 
 apply plugin: "io.gitlab.arturbosch.detekt"
+
+description = "Card scanner"
+group = "com.Haltaev"
+version = '1.0.0'
 
 allprojects {
     group = GROUP
@@ -92,7 +97,7 @@ apiValidation {
     ignoredPackages += ["com.stripe.android.databinding"]
     ignoredProjects += [
             "stripecardscan-example",
-            "3ds2playground",
+//            "3ds2playground",
             "dokka-stripe",
     ]
     nonPublicMarkers.add("androidx.annotation.RestrictTo")
@@ -113,6 +118,26 @@ subprojects {
                     }
                     because("LayoutLib and sdk-common depend on Guava's -jre published variant." +
                             "See https://github.com/cashapp/paparazzi/issues/906.")
+                }
+            }
+        }
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'stripe-android-card-scan'
+
+            pom {
+                name = 'Card scanner'
+                description = 'Card scanner'
+                licenses {
+                    license {
+                        name = "MIT License"
+                        url = "https://opensource.org/licenses/MIT"
+                        distribution = "repo"
+                    }
                 }
             }
         }

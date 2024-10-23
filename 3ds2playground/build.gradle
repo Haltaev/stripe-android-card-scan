@@ -42,7 +42,7 @@ android {
 }
 
 dependencies {
-    implementation project(":3ds2sdk")
+//    implementation project(":3ds2sdk")
 
     implementation libs.androidx.appCompat
     implementation libs.androidx.coreKtx
