@@ -17,21 +17,21 @@ afterEvaluate {
                 from(components.release)
 
                 // You can then customize attributes of the publication as shown below.
-                groupId = "com.stripe"
-                artifactId = "stripe-3ds2-android"
-                version = VERSION_NAME
+                groupId = "com.github.Haltaev"
+                artifactId = "stripe-android-card-scan"
+                version = "1.0.0"
 
                 pom {
-                    name = "stripe-3ds2-android"
+                    name = "stripe-android-card-scan"
                     packaging = "aar"
-                    description = "Stripe 3DS2 Android SDK"
-                    url = "https://github.com/stripe/stripe-android"
+                    description = "stripe android card scan SDK"
+                    url = "https://github.com/Haltaev/stripe-android-card-scan"
 
-                    scm {
-                        url = "https://github.com/stripe/stripe-android"
-                        connection = "scm:org-856813@github.com:stripe/stripe-android.git"
-                        developerConnection = "scm:org-856813@github.com:stripe/stripe-android.git"
-                    }
+//                    scm {
+//                        url = "https://github.com/stripe/stripe-android"
+//                        connection = "scm:org-856813@github.com:stripe/stripe-android.git"
+//                        developerConnection = "scm:org-856813@github.com:stripe/stripe-android.git"
+//                    }
 
                     licenses {
                         license {
@@ -41,12 +41,12 @@ afterEvaluate {
                         }
                     }
 
-                    developers {
-                        developer {
-                            id = "stripe"
-                            name = "Stripe"
-                        }
-                    }
+//                    developers {
+//                        developer {
+//                            id = "stripe"
+//                            name = "Stripe"
+//                        }
+//                    }
                 }
             }
         }
