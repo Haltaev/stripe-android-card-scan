@@ -1,6 +1,0 @@
-{
-  "object": "list",
-  "data": [PAYMENT_METHODS_HERE],
-  "has_more": false,
-  "url": "/v1/payment_methods"
-}

@@ -77,6 +77,9 @@ import androidx.annotation.CheckResult
  * | 62****          | UnionPay                  | 16 - 19 | 3       | Luhn                        |
  * | 81****          | UnionPay                  | 16 - 19 | 3       | Luhn                        |
  * | 4*****          | Visa                      | 16 - 19 | 3       | Luhn                        |
+ * | 5614**          | UzcardCobage              | 16      |         | Luhn                        |
+ * | 8600**          | Uzcard                    | 16      |         | Luhn                        |
+ * | 9860**          | Humo                      | 16      |         | Luhn                        |
  * | --------------- | ------------------------- | ------- | ------- | --------------------------- |
  */
 
@@ -253,7 +256,25 @@ private val ISSUER_TABLE: List<IssuerData> = listOf(
         (16..19).toList(),
         listOf(3),
         LengthPanValidator + LuhnPanValidator
-    )
+    ),
+    IssuerData(
+        561400..561499,
+        CardIssuer.UzcardCobage, (16..16).toList(),
+        listOf(3),
+        LengthPanValidator + LuhnPanValidator
+    ),
+    IssuerData(
+        860000..869999,
+        CardIssuer.Uzcard, (16..16).toList(),
+        listOf(3),
+        LengthPanValidator + LuhnPanValidator
+    ),
+    IssuerData(
+        986000..986999,
+        CardIssuer.Humo, (16..16).toList(),
+        listOf(3),
+        LengthPanValidator + LuhnPanValidator
+    ),
 )
 
 /**

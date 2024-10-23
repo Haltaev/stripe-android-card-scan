@@ -13,6 +13,9 @@ sealed class CardIssuer(open val displayName: String) {
     data object UnionPay : CardIssuer("UnionPay")
     data object Unknown : CardIssuer("Unknown")
     data object Visa : CardIssuer("Visa")
+    data object Uzcard : CardIssuer("Uzcard")
+    data object UzcardCobage : CardIssuer("UzcardCobage")
+    data object Humo : CardIssuer("Humo")
 }
 
 /**
