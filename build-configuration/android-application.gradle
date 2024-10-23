@@ -23,25 +23,25 @@ android {
         versionName VERSION_NAME
     }
 
-    signingConfigs {
-        config {
-            keyAlias 'example'
-            keyPassword 'Stripe12345'
-            // Generated with: `echo y | keytool -genkeypair -dname "cn=Stripe Developer, ou=Stripe, o=Stripe, c=US" -alias example -keypass Stripe12345 -keystore stripe-example.keystore -storepass Stripe12345 -keyalg RSA -keysize 2048 -validity 20000`
-            storeFile rootProject.file('stripe-example.keystore')
-            storePassword 'Stripe12345'
-        }
-    }
+//    signingConfigs {
+//        config {
+//            keyAlias 'example'
+//            keyPassword 'Stripe12345'
+//            // Generated with: `echo y | keytool -genkeypair -dname "cn=Stripe Developer, ou=Stripe, o=Stripe, c=US" -alias example -keypass Stripe12345 -keystore stripe-example.keystore -storepass Stripe12345 -keyalg RSA -keysize 2048 -validity 20000`
+////            storeFile rootProject.file('stripe-example.keystore')
+//            storePassword 'Stripe12345'
+//        }
+//    }
 
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
+//            signingConfig signingConfigs.config
         }
         debug {
-            signingConfig signingConfigs.config
+//            signingConfig signingConfigs.config
         }
     }
 
